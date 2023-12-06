@@ -1,0 +1,54 @@
+{
+  "Entrantes": [
+    {
+      "nombre": "Samosa Vegetal (2 Unds)",
+      "description": "Empanadillas de masa crujiente rellenas de patata y especias.(ALERGENOS: Gluten, frutos secos)",
+      "price": "4.95"
+    },
+    {
+      "nombre": "Samosa de pollo (2 Unds)",
+      "description": "Empanadillas de masa casera rellenas de pechuga de pollo picada y especias. (ALERGENOS: Gluten, frutos secos)",
+      "price": "4.95"
+    },
+    {
+      "nombre": "Pakora vegetal",
+      "description": " Tiras de verduras rebozadas en harina de garbanzos.",
+      "price": "4.50"
+    },
+    {
+      "nombre": "Pakora de Gambas",
+      "description": "Gambas peladas rebozadas en harina de garbanzos.",
+      "price": "5.95"
+    },
+    {
+      "nombre": "Pakora de Pollo",
+      "description": "Trocitos de pechuga de pollo rebozados en harina de garbanzos.",
+      "price": "4.95"
+    },
+    {
+      "nombre": "Aloo Chop",
+      "description": "Pastelitos de patatas y cebolla rebozado en harina de garbanzos.",
+      "price": "4.50"
+    },
+    {
+      "nombre": "Sheek Kebab",
+      "description": "Brocheta de cordero picado, cocinada en tandoorí con especias y hierbas.",
+      "price": "5.50"
+    },
+    {
+      "nombre": "Cebolla Bhaji",
+      "description": "Tiras de cebolla rebozados en harina de garbanzos.",
+      "price": "4.50"
+    },
+    {
+      "nombre": "Surtido de Aperitivos",
+      "description": "Samosa, pakora vegetal, pakora de pollo y sheek kebab (para 2 personas).(ALERGENOS: Gluten, frutos secos)",
+      "price": "8.50"
+    },
+    {
+      "nombre": "Momo (8 Unds)",
+      "description": "Empanadilla de carne picada de pechuga de pollo cocido al vapor, Servido con achar nepáli.(ALERGENOS: Gluten,sesamo)",
+      "price": "8.50"
+    }
+  ]
+}

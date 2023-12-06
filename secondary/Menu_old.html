@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="MENU.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Menus</title>
+    <style>
+      .Container-one .alergico {
+    border-bottom: 1px solid rgb(21, 189, 255);
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.Container-one .Container-detail {
+    max-width: 100%;
+    display: GRID;
+    place-content: center;
+    grid-template-columns: repeat(7, 1fr);
+
+}
+
+@media (max-width:547px) {
+    .Container-one .Container-detail {
+        max-width: 400px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .Container-one .Container-detail .details1 p {
+        margin-top: 12px;
+
+    }
+}
+
+.alergico {
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+.info .info-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(33, 67, 105);
+      }
+
+      .container-menu {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container-menu .menu {
+        margin: 0;
+        padding: 0;
+        min-width: 200px;
+        overflow-y: scroll;
+        gap: 200px;
+        background-color: rgb(255, 255, 255);
+        height: fit-content;
+        box-shadow: 0px 5px 12px rgb(25, 21, 21);
+      }
+
+      .Word_menu {
+        background-color: black;
+        color: rgb(255, 255, 255);
+        display: grid;
+        place-content: center;
+        text-transform: uppercase;
+        font-size: 40px;
+        position: relative;
+        width: 100%;
+        height: fit-content;
+      }
+
+      .container-menu .menu ._list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+        gap: 40px;
+        overflow-x: scroll;
+        position: relative;
+        width: 100%;
+      }
+
+      .container-menu .menu ._list button {
+        margin: 20px;
+        color: rgb(0, 0, 0);
+        border-radius: 15px;
+        padding: 5px;
+        font-size: 15px;
+        min-width: fit-content;
+        text-transform: uppercase;
+        border: none;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      ::-webkit-scrollbar {
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-button {
+        width: 20px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        width: 20px;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 0.4) 0%,
+          rgba(16, 181, 214, 0.5) 34%,
+          rgba(0, 212, 255, 0.6) 100%
+        );
+        border-radius: 20px;
+      }
+
+      .active_tab {
+        border-radius: 15px;
+        background-color: rgb(91, 200, 173);
+      }
+
+      .container-menu {
+        display: flex;
+        width: 100%;
+      }
+      .tabcontent {
+        color: white;
+        visibility: hidden;
+        position: absolute;
+        margin-top: 40px;
+      }
+
+      .activecontent {
+        visibility: visible;
+      }
+
+      @media (min-width: 1222px) {
+        .tabcontent {
+          margin-top: 40px;
+          margin-left: 360px;
+        }
+      }
+
+      .tabcontent {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .tabconten .info .info-details {
+        display: flex;
+        place-content: center;
+      }
+      .shape {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .shape p {
+        color: red;
+      }
+
+      .shape p:nth-child(2) {
+        margin-left: 20px;
+      }
+      .Container-one .alergico {
+        border-bottom: 1px solid rgb(21, 189, 255);
+        width: 100%;
+        display: grid;
+        place-content: center;
+      }
+
+      .Container-one .Container-detail {
+        max-width: 100%;
+        display: GRID;
+        place-content: center;
+        grid-template-columns: repeat(7, 1fr);
+      }
+
+      @media (max-width: 547px) {
+        .Container-one .Container-detail {
+          max-width: 400px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .Container-one .Container-detail .details1 p {
+          margin-top: 12px;
+        }
+      }
+
+      .alergico {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .info .info-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-menu">
+      <div class="Word_menu">Menú</div>
+      <div class="menu">
+        <div class="_list">
+          <button class="tablinks" data-for-tab="Entrantes">Entrantes</button>
+          <button class="tablinks" data-for-tab="Surgencias">
+            Surgencias de chef Sizzler y Curry
+          </button>
+          <button class="tablinks" data-for-tab="Horno">
+            Platos Curry y Horno Tandoori
+          </button>
+          <button class="tablinks" data-for-tab="Tikka">
+            Platos Tikka masala, korma y pasanda
+          </button>
+          <button
+            class="tablinks"
+            data-for-tab="Karahi_Jalfrezi_Espinaca_Bhuna"
+          >
+            Platos Karahi, Jalfrezi, Espinaca y Bhuna
+          </button>
+          <button class="tablinks" data-for-tab="Balti">
+            Platos Balti, Dansak, Madras y Vindaloo
+          </button>
+          <button class="tablinks" data-for-tab="Niño">
+            Platos Verduras, Briyani y Menu para Niños
+          </button>
+          <button class="tablinks" data-for-tab="basmati">
+            Platos Basmati y Pan
+          </button>
+          <button class="tablinks" data-for-tab="Postres">Postres</button>
+          <button class="tablinks" data-for-tab="Menu_especial">
+            Menu_especial
+          </button>
+        </div>
+        <style></style>
+        <div data-tab="Menu_especial" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <strong>Menú Degustación</strong>
+              <strong>Aperitivo</strong>
+              <p>Papadam con salsa</p>
+              <strong>Entrantes</strong>
+              <p>Samosa Pakora Vegetal pollo Tikka</p>
+              <strong> Platos Principales </strong>
+              <p>Pollo Tikka Masala Cordero Roganjosh Dhal Makhni</p>
+              <strong>Acompañamiento </strong>
+              <p>Arroz Pilau Naan</p>
+              <strong> Postres </strong>
+              <p>Kulfi Mango Lassi</p>
+              <strong> Incluye </strong>
+              <p>Refrescos ó Copa de Vino ó Doble Caña</p>
+            </div>
+
+            <div class="shape">
+              <p>58.00 €</p>
+              <p>Para 2 Personas</p>
+            </div>
+
+            <div class="Container-one">
+              <div class="alergico">Alérgenos</div>
+              <div class="Container-detail">
+                <div class="details1">
+                  <p>Gluten</p>
+                </div>
+                <style></style>
+                <div class="details1">
+                  <p>Crustaceos</p>
+                </div>
+                <div class="details1">
+                  <p>Huevos</p>
+                </div>
+                <div class="details1">
+                  <p>Pescado</p>
+                </div>
+                <div class="details1">
+                  <p>Cacahutes</p>
+                </div>
+                <div class="details1">
+                  <p>Soja</p>
+                </div>
+                <div class="details1">
+                  <p>Lacteos</p>
+                </div>
+                <div class="details1">
+                  <p>Frutos de Cascara</p>
+                </div>
+                <div class="details1">
+                  <p>Apio</p>
+                </div>
+                <div class="details1">
+                  <p>Moztaza</p>
+                </div>
+                <div class="details1">
+                  <p>sesamo</p>
+                </div>
+                <div class="details1">
+                  <p>Dioxido de azufre y sulfitos</p>
+                </div>
+                <div class="details1">
+                  <p>Moluscos</p>
+                </div>
+                <div class="details1">
+                  <p>Altiamuces</p>
+                </div>
+              </div>
+              <div class="info-alergico">
+                <p>
+                  <em
+                    >HAY INFORMACION DISPONIBLE SOBRE ALERGENOS INTOLERACIONES
+                    ALIMENTARIAS .SOLICITELAS A NUESTRO PERSONAL MUCHAS GRACIAS.
+                  </em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>
+          .info-details {
+            display: flex;
+            flex-direction: column;
+          }
+        </style>
+        <div data-tab="Entrantes" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <h3>Entrantes</h3>
+              <strong> Samosa Vegetal (2 Unds) - - - 4.95€ </strong>
+              <em>
+                Empanadillas de masa crujiente rellenas de patata y
+                especias.(ALERGENOS: Gluten, frutos secos)
+              </em>
+              <strong> Samosa de pollo (2 Unds) - - - 4.95€ </strong>
+              <em>
+                Empanadillas de masa casera rellenas de pechuga de pollo picada
+                y especias. (ALERGENOS: Gluten, frutos secos)
+              </em>
+
+              <strong> Pakora vegetal - - - 4.50€ </strong>
+              <em> Tiras de verduras rebozadas en harina de garbanzos. </em>
+
+              <strong> Pakora de Gambas - - - 5.95€ </strong>
+              <em> Gambas peladas rebozadas en harina de garbanzos. </em>
+
+              <strong> Pakora de Pollo - - - 4.95€ </strong>
+              <em>
+                Trocitos de pechuga de pollo rebozados en harina de garbanzos.
+              </em>
+
+              <strong> Aloo Chop - - - 4.50€ </strong>
+              <em>
+                Pastelitos de patatas y cebolla rebozado en harina de garbanzos
+              </em>
+
+              <strong> Sheek Kebab - - - 5.50€ </strong>
+              <em>
+                Brocheta de cordero picado, cocinada en tandoorí con especias y
+                hierbas.
+              </em>
+              <strong> Cebolla Bhaji - - - 4.50€ </strong>
+              <em> Tiras de cebolla rebozados en harina de garbanzos. </em>
+              <strong> Surtido de Aperitivos - - - 8.50€ </strong>
+              <em>
+                Samosa, pakora vegetal, pakora de pollo y sheek kebab (para 2
+                personas).(ALERGENOS: Gluten, frutos secos)
+              </em>
+              <strong> Momo (8 Unds) - - - 8.50€ </strong>
+              <em>
+                Empanadilla de carne picada de pechuga de pollo cocido al vapor,
+                Servido con achar nepáli.(ALERGENOS: Gluten, sesamo)
+              </em>
+            </div>
+            <div class="info-details">
+              <h2>Ensalada y Sopa</h2>
+              <strong> Ensalada Mixta - - - 5.95€ </strong>
+              <em>
+                Lechuga, tomate, cebolla, atún, maiz dice etc.(ALERGENOS:
+                Sulfitos, Lacteos)
+              </em>
+              <br />
+
+              <strong> Ensalada Especial Annapurna - - - 7.50€ </strong>
+              <em>
+                Ensalada mixta con pollo tikka y queso fresco.(ALERGENOS:
+                Sulfitos, Lacteos)
+              </em>
+              <br />
+              <strong> Sopa de pollo - - - 5.50€ </strong>
+              <em>
+                Sopa de pechuga de pollo picado con hierbas.(ALERGENOS: Lacteos)
+              </em>
+              <br />
+              <strong> Sopa de Verdura - - - 5.50€ </strong>
+              <em>
+                Sopa de verdura con hierbas aromáticas.(ALERGENOS: Lacteos)
+              </em>
+              <br />
+            </div>
+          </div>
+        </div>
+
+        <div data-tab="Surgencias" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <strong> Surgencias del Chef de Sizzler</strong>
+              <h3>CHEFS RECOMMENDATION SIZZLER</h3>
+              <h4>
+                Las platos tandoori son especials y estan marinados con hierbas
+                frescas y especiales asados em el horno tandoori, servido sobre
+                un plato caliente
+              </h4>
+              <strong> Pollo Sekuwa - - - 13.50€ </strong>
+              <em
+                >Pollo al estilo tradicional nepali elaborado en horno
+                tandoorí.</em
+              >
+              <strong> Pollo Pahadi - - - 13.50€</strong>
+              <em>
+                Pechuga de pollo marinado con ajo, jengibre, guindilla verde y
+                especias.</em
+              >
+              <strong>Pollo Hariyali - - - 12.50€</strong>
+              <em>
+                Pechuga de pollo marinado con yogur, menta y
+                especías..(ALERGENOS: Lacteos, frutos secos)
+              </em>
+              <strong> Pollo Achari - - - 13.50€ </strong>
+              <em>
+                Pechuga de pollo marinado. ligeramente picante con achar nepali
+                asado en horno tandoori.
+              </em>
+              <strong> Malai Tikka - - - 12.95€ </strong>
+              <em>
+                Tierna pechuga de pollo marinada con ajo, jengibre, almendras y
+                nata fresca.(ALERGENOS: Lacteos, frutos secos)
+              </em>
+              <strong> Cordero Sekuwa - - - 14.95€ </strong>
+              <em>
+                Cordero preparado en horno tandoorí estilo tradicional nepali.
+              </em>
+              <strong> Cordero Pahadi - - - 14.95€ </strong>
+              <em>
+                Cordero marinado con ajo, jengibre, guindilla verde y especias.
+              </em>
+              <strong> Cordero Achari - - - 14.95€ </strong>
+              <em>
+                Cordero marinado ligeramente picante con achar nepali asado en
+                horno tandoorí.
+              </em>
+            </div>
+            <br />
+            <div class="info-details">
+              <h1>Surgencias del Chef de Curry</h1>
+              <h3>CHEFS RECOMMENDATION CURRY</h3>
+              <h4>
+                Platos preparado con hirbas tradicionales en nuestra salsa
+                casera
+              </h4>
+              <strong> Butter Chicken - - - 13.50€ </strong>
+              <em>
+                Pollo tandoori cocinado con una salsa suave de almendras,
+                tomate, Mantequilla y Nata fresca.(ALERGENOS: Lacteos, frutos
+                secos)
+              </em>
+              <strong> Pollo Mango - - - 13.50€ </strong>
+              <em>
+                Pechuga de pollo cocinada con salsa de mango, coco, nata fresca
+                y unas salsa suave de curry.(ALERGENOS: Lacteos, frutos secos)
+              </em>
+              <strong> Pollo Hawai - - - 12.95€ </strong>
+              <em>
+                Pechuga de pollo cocinada con piña, coco, nata fresca y una
+                salsa suave de curry.(ALERGENOS: frutos secos , Lacteos)
+              </em>
+              <strong> Cordero Roganjush - - - 13.95€ </strong>
+              <em>
+                Clásico curry de cordero con saña de tomate y
+                hierbas.(ALERGENOS: frutos secos)
+              </em>
+              <strong> Goan King Prawn Curry - - - 14.95€ </strong>
+              <em>
+                Langostinos tigre preparado con leche de coco, cebolla, semillas
+                de mostaza, salsa de tomate y especias.(ALERGENOS: frutos secos
+                , Lacteos)
+              </em>
+              <strong> Butter Paneer Masala - - - 13.95€ </strong>
+              <em>
+                Queso casero cocinado con una salsa suave de almendras, tomate,
+                Mantequilla y Nata fresca.(ALERGENOS: frutos secos , Lacteos)
+              </em>
+            </div>
+          </div>
+        </div>
+        <div data-tab="Horno" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <h3>Platos al Horno Tandoori</h3>
+              <h4>Tandoori Dishes</h4>
+              <strong> Pollo Tandoori - - - 12.50€ </strong>
+              <em>
+                Pollo marinado con yogur, lima, ajo, jengibre y
+                hierbas.(ALERGENOS: Lacteos)
+              </em>
+              <strong> Pollo Tikka - - - 12.50€ </strong>
+              <em>
+                Trozos de pechuga marinados con yogur, lima, ajo, jengibre y
+                salsa de soja.(ALERGENOS: Lacteos)
+              </em>
+              <strong> Pollo Tikka con Queso - - - 13.50€ </strong>
+              <em> Pollo Tikka preparado con Queso.(ALERGENOS: Lacteos) </em>
+              <strong> Pollo Tikka Manchurian - - - 12.50€ </strong>
+              <em>
+                Pollo tillka cocinado con pimiento verde y rojo, cebolla,
+                especias, hierbas y salsa de soja.(ALERGENOS: Lacteos, soja)
+              </em>
+              <strong> Cordero Tikka - - - 13.95€ </strong>
+              <em>
+                Tiernos trocitos de cordero marinados con yogur, lima, ajo y
+                jengibre. (ALERGENOS: Lacteos)
+              </em>
+              <strong> Cordero Tikka Manchurian - - - 13.95€ </strong>
+              <em>
+                Cordero tikka cocinado con pimiento verde y rojo, cebolla,
+                hierbas y salsa de soja.(ALERGENOS: Crustaceos, Soja)
+              </em>
+              <strong> Pescado al Tandoori - - - 12.95€ </strong>
+              <em>
+                Trozos de emperador marinados con majo Jempibre, lima y otras
+                especias.(ALERGENOS: Pescado)
+              </em>
+              <strong> Gambas Manchuri - - - 13.50€ </strong>
+              <em>
+                Gambas peladas cocinado con pimiento verde y rojo, cebola,
+                especias, hierbas y salsa de soja.(ALERGENOS: Crustaceos, Soja)
+              </em>
+              <strong> King Prawn Tandoori - - - 15.95€ </strong>
+              <em>
+                Langostinos tigre marinados con yogur, ajo, jengibre, lima y
+                hierbas aromáticas.(ALERGENOS: Crustaceos, Lacteos)
+              </em>
+              <strong> Annapurna Mix Grill - - - 16.95€ </strong>
+              <em>
+                Combinado de pollo ti£ka, pollo tandoori, cordero tikka, gambon
+                al Tañdoori y Sheek kebabs(ALERGENOS: Crustaceos, Lacteos)
+              </em>
+            </div>
+            <div class="info-details">
+              <h2>Platos Curry</h2>
+              <h3>Curry Dishes</h3>
+              <h5>
+                Nuestros curris caseros están cocinados a fuego lento y
+                aderezados con Especias tradicionales y hierbas aromáticas. (So
+                puede pedir suave o picante)
+              </h5>
+              <strong> Pollo al Curry - - - 11.95€ </strong>
+              <strong> Cordero al Curry - - - 12.95€ </strong>
+
+              <strong> Pescado al Curry - - - 12.95€ </strong>
+
+              <strong> Gambas al Curry - - - 13.50€ </strong>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab="Tikka" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <h2>Platos Tikka Masala</h2>
+              <h3>Tikka Masala Dishes</h3>
+              <h4>
+                Nuestros platos tikka masala se elaboran con una sala cremosa de
+                coco, almendras, nata fresca, especias y hiterbas aromdticas.
+                (ALERGENOS: Frutos secos, Lacteos)
+              </h4>
+              <strong> Pollo Tikka Masala - - - 12.95€ </strong>
+              <strong> Cordero Tikka Masala - - - 13.50€ </strong>
+              <strong> Pescado Tikka Masala - - - 12.95€ </strong>
+              <strong> Gambas Tikka Masala - - - 13.95€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Platos Korma</h2>
+              <h3>Korma Dishes</h3>
+              <h4>
+                Nuestros platos korma se preparan con una suave salsa de
+                anacardo, frutos secos, coco, almendras y nata fresca.
+                (ALERGENOS: Frutos secos, Lacteos)
+              </h4>
+              <strong> Pollo Korma - - - 12.95€ </strong>
+              <strong> Pollo Tikka Korma - - - 13.50€ </strong>
+              <strong> Cordero Korma - - - 13.95€ </strong>
+              <strong> Gambas Korma - - - 13.95€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Platos Pasanda</h2>
+              <h3>Pasanda Dishes</h3>
+              <h4>
+                Elaborados con salsa de tomate, almendras, cocktail de frutas y
+                nata fresca. (ALERGENOS: Frutos secos, Lacteos,Sulfitos)
+              </h4>
+              <strong> Pollo Pasanda - - - 12.95€ </strong>
+              <strong> Cordero Pasada - - - 13.95€ </strong>
+              <strong> Gambas Pasada - - - 13.95€ </strong>
+            </div>
+          </div>
+        </div>
+        <div data-tab="Karahi_Jalfrezi_Espinaca_Bhuna" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <h2>Platos Karahi</h2>
+              <h3>Karahi Dishes</h3>
+              <h4>
+                Son platos exticos cocinados con tomate, pimiento rojo y verde,
+                cebolla, semilfa de cilantro, fenogreco y nata fresca,
+                (ALERGENOS: Frutos secos, Lacteos) (se puede pedir
+              </h4>
+              <strong> Pollo Karabi - - - 12.50€ </strong>
+              <strong> Pollo Tikka Karahi - - - 12.95€ </strong>
+              <strong> Cordero Karahi - - - 13.95€ </strong>
+              <strong> Gambas Karahi - - - 13.95€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Platos Jalfrezi</h2>
+              <h3>Jalfrezi Dishes</h3>
+              <h4>
+                Platos perparados con ajo , cebolla, tomate, pimiento rojo y
+                verde (se puede pedir suave o picante) (ALERGENOS: Frutos secos,
+                Lacteos)
+              </h4>
+              <strong> Pollo Tikka Jalfrez - - - 12.50€ </strong>
+              <strong> Cordero Jalfrezi - - - 12.95€ </strong>
+              <strong> Gambas Jalfrezi - - - 13.95€ </strong>
+              <strong> Pollo Jalfrezi - - - 13.95€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Platos Espinaca</h2>
+              <h3>Saag Dishes</h3>
+              <h4>
+                Se elaboran con salsa de espinacas con tomate y nata fresca. (Se
+                puede pedir suave o picante). (ALERGENOS: Frutos secos, Lacteos)
+              </h4>
+              <strong> Pollo Tikka con Espinaca - 12.50€ </strong>
+              <strong> Pollo con Espinaca - - - 12.95€ </strong>
+              <strong> Cordero con Espinaca - - - 13.95€ </strong>
+              <strong> Gambas con Espinaca - - - 13.95€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Platos Bhuna</h2>
+              <h3>Bhuna Dishes</h3>
+              <h4>
+                Preparado con una salsa densa de cebolla picada, pimiento verde
+                y rojo, ajo, jengibre y tomate fresco. (Ge puede pedir suave o
+                picante). (ALERGENOS: Frutos secos, Lacteos)
+              </h4>
+              <strong> Pollo Bhauna - - - 12.50€ </strong>
+              <strong> Pollo Tikka Bhuna - - - 12.95€ </strong>
+              <strong> Cordero Bhuna - - - 13.95€ </strong>
+              <strong> Gambas Bhuna - - - 13.95€ </strong>
+            </div>
+          </div>
+        </div>
+        <div data-tab="Balti" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <h2>Platos Balti</h2>
+              <h3>Balti Dishes</h3>
+              <h4>
+                Elaborado con tomate fresco, pimiento rojo y verde cebolla, ajo,
+                Jengibre y salsa especial. (Se puede peidir suave o picante)
+                (ALERGENOS: Frutos secos, Lacteos)
+              </h4>
+              <strong> Pollo Balti - - - 12.50€ </strong>
+              <strong> Pollo Tikka Balti - - - 12.95€ </strong>
+              <strong> Cordera Balti - - - 12.95€ </strong>
+              <strong> Gambas Balti - - - 12.95€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Platos Dansak</h2>
+              <h3>Dansak Dishes</h3>
+              <h4>
+                Platos ligeramente agridulces preparados con lentejas amarillas,
+                Lima, hierbas aromaticas y especias (ALERGENOS: Frutos secos,
+                Lacteos)
+              </h4>
+              <strong> Pollo Dansak - - - 12.50€ </strong>
+              <strong> Pollo Tikka Dansak - - 12.9595€ </strong>
+              <strong> Cordero Dansak - - - 13.95€ </strong>
+              <strong> Gambas Dansak - - - 13.95€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Platos Madras</h2>
+              <h3>Madras Dishes</h3>
+              <h4>
+                Platos muy populares y originarios del sur de india,preparados
+                con coco, tomate fresco, cebolla, cilantro fresco y con una
+                salsa picante (ALERGENOS: Frutos secos)
+              </h4>
+              <strong> Pollo Madras - - - 12.95€ </strong>
+              <strong> Pollo Tikka Madras - - - 12.50€ </strong>
+              <strong> Cordera Madras - - - 13.50€ </strong>
+              <strong> Gambas Madras - - - 13.50€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Platos Vindaloo</h2>
+              <h3>VANDALOO DISHES</h3>
+              <h4>
+                Es un plato muy picante cde la zpna de goa, con exoticas patata
+                y Lima (ALERGENOS: Frutos secos)
+              </h4>
+              <strong> Pollo Vindaloo - - - 12.95€ </strong>
+              <strong> Pollo Tikka Vindaloo - - - 12.50€ </strong>
+              <strong> Cordero Vindaloo - - - 13.50€ </strong>
+              <strong> Gambas Vindaloo - - - 13.50€ </strong>
+            </div>
+          </div>
+        </div>
+        <div data-tab="Niño" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <h2>Platos Verduras</h2>
+              <h3>Vegetable Dishes</h3>
+
+              <strong> Vegetal Mixta Curry - - - 11.50€ </strong>
+              <em>
+                Verdura según temporada con salsa de curry y hierbas temporada.
+                (ALERGENOS: Frutos secos, Lacteos)
+              </em>
+              <strong> Vegetal Madras - - - 11.95€ </strong>
+              <em>
+                Verduras cocinada con una salsa picante y coco. (ALERGENOS:
+                Frutos secos)
+              </em>
+              <strong> Malai Kofta - - - 11.95€ </strong>
+              <em>
+                Albondigas de verdura y paneer en salsa cremosa de almendras y
+                frutos secos (ALERGENOS: Frutos secos, Lacteos)
+              </em>
+              <strong> Paneer Espinaca - - - 11.95€ </strong>
+              <em>
+                Trozos de paneer (queso casero indio) con espinaca, tomate,
+                fenogreco y especias (ALERGENOS: Frutos secos, Lacteos)
+              </em>
+              <strong> Lentejas Tadka - - - 10.95€ </strong>
+              <em>
+                Clasicas lentejas indias amarillas con especias y hierbas.
+                (ALERGENOS: Frutos secos)
+              </em>
+              <strong> Lentejas Makhani - - - 10.95€ </strong>
+              <em>
+                Suave cremoso curry de lentejas negras con hierbas y especias.
+                (ALERGENOS: Frutos secos, Lacteos)
+              </em>
+              <strong> Garbanzos Masala - - - 10.95€ </strong>
+              <em>
+                Garbanzo cocinados con cebolta, ajo, tomate y especias
+                aromaticas. (ALERGENOS: Frutos secos, Lacteos)
+              </em>
+              <strong> Champiñón Bhaji - - - 10.95€ </strong>
+              <em>
+                Champinn fresco salteado con cebolla, ajo, tomate y hierbas.
+                (ALERGENOS: Frutos secos, Lacteos)
+              </em>
+              <strong> Paneer Manchurian - - - 12.95€ </strong>
+              <em>
+                Queso casero fncio cocinado con pimiento verde y rojo, cebolla,
+                especias, hierbas y salsa de soja.(ALERGENOS: Frutos secos,
+                Lacteos y Soja)
+              </em>
+            </div>
+            <div class="info-details">
+              <h2>Platos Biryani</h2>
+              <h3>Biryani Dishes</h3>
+              <h4>
+                Arréz basmati Cocinado a fuego lento con frutos secos, cebolla,
+                cardamomo azafran y otras especias, al que se pueden anadir los
+                siguientes ingredientes. (ALERGENOS: Frutos secos)
+              </h4>
+              <strong> Verduras - - - 13.95€ </strong>
+              <strong> Pollo - - - 14.95€ </strong>
+              <strong> Cordero - - - 15.95€ </strong
+              ><strong> Gambas - - - - 15.95€ </strong>
+              <strong> Especial Biryani Annapurné - - - 16.95€ </strong>
+            </div>
+            <div class="info-details">
+              <h2>Menu para Niños</h2>
+              <h3>Kid's Menu</h3>
+              (ALERGENOS: Frutos secos, Lacteos)
+              <style></style>
+              <style>
+                .Contains_kid_Menu {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 100px;
+                }
+
+                .Contains_kid_Menu .text_nino {
+                  display: flex;
+                  flex-direction: column;
+                }
+              </style>
+              <div class="Contains_kid_Menu">
+                <span class="text_nino">
+                  <strong>Pollo Korma con Arroz Basmati - - -</strong>
+                  <strong> Pollo Tikka Masala con Arraz Basmati - - - </strong>
+                  <strong>Pollo Tikka con Arroz Basmati - - - </strong>
+                  <strong>Pollo Mango con Arroz Basmati - - - </strong>
+                  <strong>Arroz salteado con huevos rotos - - - </strong>
+                  <strong> Nuggets de Pollo con patatas ó Arroz - - - </strong>
+                </span>
+
+                <span class="Kid_Menu_Price"> 8.50€ </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tab="basmati" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <h2>Platos Basmati</h2>
+              <h3>Basmati Rice</h3>
+              <h4>
+                El basmati es un tipo de arroz largo que se cultiva
+                principalmente al sur de Himalaya su principal caracteristica es
+                su intenso aroma natural.
+              </h4>
+              <strong> Arroz blanco - - - 3.95€ </strong>
+              <em> Arroz basmati al vapor. </em>
+              <strong> Arroz pulau - - - 4.50€ </strong>
+              <em>
+                Arroz basmati con cardamom, canefa, anis estrellado, clavo y
+                azafran.
+              </em>
+              <strong> Kasmiri Pulau - - - 5.50€ </strong>
+              <em>
+                Arroz Basmati con frutos secos y azafrén. (ALERGENOS: Frutos
+                secos, Lacteos)
+              </em>
+              <strong> Arroz champinién - - - 4.95€ </strong>
+              <em> Arroz basmati con champinénes frescos. </em>
+              <strong> Arroz Keema - - - 4.95€ </strong>
+              <em> Arroz basmati con carne picada </em>
+              <strong> Arraoz Limén - - - 4.50€ </strong>
+              <em> Arroz basmati con limén fresco. </em>
+            </div>
+
+            <div class="info-details">
+              <h2>Pan</h2>
+              <h3>Naan Bread</h3>
+              <strong> Naan - - - 2.95€ </strong>
+              <em>
+                Tipico pan Hindi de harina de trigo, preparadg en fiorno
+                tandoori. (ALERGENOS: Gluten, Lacteos)
+              </em>
+              <strong> Naan con Ajo - - - 3.25€ </strong>
+              <em> pan Hindu con ajo (ALERGENOS: Gluten, Lacteos) </em>
+              <strong> Naan con Queso - - - 4.95€ </strong>
+              <em>
+                Pan Hindu relleno con Queso. (ALERGENOS: Gluten, Lacteos)
+              </em>
+              <strong> Naan Makhani - - - 3.75€ </strong>
+              <em> Pan Hindi con Mantequilfa. (ALERGENOS: Gluten, Lacteos) </em>
+              <strong> Naan con Cebolla - - - 3.50€ </strong>
+              <em>
+                Pan Hindu relleno con Cebolla. (ALERGENOS: Gluten, Lacteos)
+              </em>
+              <strong> Naan Peshwari - - - 4.25€ </strong>
+              <em>
+                Pan Hindu relleno de almendras, coco y frutos secos. (ALERGENOS:
+                Gluten, Lacteos)
+              </em>
+              <strong> Keema Naan - - - 4.25€ </strong>
+              <em>
+                Pan Hindi relleno con carne picada. (ALERGENOS: Gluten, Lacteos)
+              </em>
+            </div>
+            <div class="Container-one">
+              <div class="alergico">Alérgenos</div>
+              <div class="Container-detail">
+                <div class="details1">
+                  <p>Gluten</p>
+                </div>
+                <div class="details1">
+                  <p>Crustaceos</p>
+                </div>
+                <div class="details1">
+                  <p>Huevos</p>
+                </div>
+                <div class="details1">
+                  <p>Pescado</p>
+                </div>
+                <div class="details1">
+                  <p>Cacahutes</p>
+                </div>
+                <div class="details1">
+                  <p>Soja</p>
+                </div>
+                <div class="details1">
+                  <p>Lacteos</p>
+                </div>
+                <div class="details1">
+                  <p>Frutos de Cascara</p>
+                </div>
+                <div class="details1">
+                  <p>Apio</p>
+                </div>
+                <div class="details1">
+                  <p>Moztaza</p>
+                </div>
+                <div class="details1">
+                  <p>sesamo</p>
+                </div>
+                <div class="details1">
+                  <p>Dioxido de azufre y sulfitos</p>
+                </div>
+                <div class="details1">
+                  <p>Moluscos</p>
+                </div>
+                <div class="details1">
+                  <p>Altiamuces</p>
+                </div>
+              </div>
+              <div class="info-alergico">
+                <p>
+                  HAY INFORMACION DISPONIBLE SOBRE ALERGENOS
+                  <em
+                    >INTOLERACIONES ALIMENTARIAS .SOLICITELAS A NUESTRO PERSONAL
+                    MUCHAS GRACIAS.
+                  </em>
+                </p>
+                <style></style>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-tab="Postres" class="tabcontent">
+          <div class="info">
+            <div class="info-details">
+              <h2>Nuestros Postres Caseros</h2>
+              <h3>HOUSE DESERTS</h3>
+              <strong> Gulab Jamun - - - 3.50€ </strong>
+              <em>
+                Bolitas de leche frita en almibar. (ALERGENOS: Gluten, Lacteos)
+              </em>
+              <strong> Kulfi de Mango - - - 4.95€ </strong>
+              <em>
+                Tipico fielado indio casero sabor mango. (ALERGENOS: Frutos
+                secos , Lacteos y Sulfitos)
+              </em>
+              <strong> Kulfi de Pistacho - - - 4.95€ </strong>
+              <em>
+                Tipico helado casero hindu avomatCAiialion pistacho. (ALERGENOS:
+                frutos secos, Lacteos)
+              </em>
+              <strong> Lassi de Mango - - - 3.95€ </strong>
+              <em>
+                Yogur batido cremoso aromatizado con mango. (ALERGENOS:
+                Sulfitos, Lacteos)
+              </em>
+              <strong> Lassi Dulce - - - 3.50€ </strong>
+              <em>
+                Cremoso batido de yogur natural azucarado. (ALERGENOS: Lacteos)
+              </em>
+              <strong> Bajar Halwa - - - 3.95€ </strong>
+              <em>
+                Tradicional pastel de zanahoria tipico indio. (ALERGENOS: Frutos
+                secos, Lacteos)
+              </em>
+              <strong> Mango Cream ---- 3.95€ </strong>
+              <em> Crema de Mango Casera.(ALERGENOS: Sulfitos) </em>
+            </div>
+
+
+            <div class="Container-one">
+              <div class="alergico">Alérgenos</div>
+              <div class="Container-detail">
+                <div class="details1">
+                  <p>Gluten</p>
+                </div>
+                <div class="details1">
+                  <p>Crustaceos</p>
+                </div>
+                <div class="details1">
+                  <p>Huevos</p>
+                </div>
+                <div class="details1">
+                  <p>Pescado</p>
+                </div>
+                <div class="details1">
+                  <p>Cacahutes</p>
+                </div>
+                <div class="details1">
+                  <p>Soja</p>
+                </div>
+                <div class="details1">
+                  <p>Lacteos</p>
+                </div>
+                <div class="details1">
+                  <p>Frutos de Cascara</p>
+                </div>
+                <div class="details1">
+                  <p>Apio</p>
+                </div>
+                <div class="details1">
+                  <p>Moztaza</p>
+                </div>
+                <div class="details1">
+                  <p>sesamo</p>
+                </div>
+                <div class="details1">
+                  <p>Dioxido de azufre y sulfitos</p>
+                </div>
+                <div class="details1">
+                  <p>Moluscos</p>
+                </div>
+                <div class="details1">
+                  <p>Altiamuces</p>
+                </div>
+              </div>
+              <div class="info-alergico">
+                <p>
+                  HAY INFORMACION DISPONIBLE SOBRE ALERGENOS
+                  <em
+                    >INTOLERACIONES ALIMENTARIAS .SOLICITELAS A NUESTRO PERSONAL
+                    MUCHAS GRACIAS.
+                  </em>
+                </p>
+                <style></style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="empty"></div>
+
+    <style>
+      .empty {
+        position: relative;
+        margin-top: 100vh;
+        height: 200vh;
+      }
+
+      footer {
+        position: sticky;
+        bottom: 0;
+      }
+
+      footer .footer-container {
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+      }
+
+      footer a {
+        text-decoration: none;
+        color: red;
+      }
+
+      footer .nav-social {
+        display: grid;
+        place-content: center;
+        bottom: 0;
+      }
+
+      footer .nav-menu {
+        display: grid;
+        place-content: center;
+        bottom: 0;
+      }
+
+      footer .nav-social .social-media {
+        display: inline-block;
+        padding-left: 20px;
+      }
+
+      .nav-manu .copy {
+        display: grid;
+        place-content: center;
+        min-height: 100px;
+      }
+
+      .nav-manu .copy span {
+        text-align: center;
+        width: 100%;
+      }
+
+      .Menu-Navigation .Menu-list {
+        display: inline-block;
+        padding-left: 20px;
+      }
+
+      .copy > span {
+        position: relative;
+        left: 90px;
+        color: red;
+      }
+
+      footer .waves {
+        position: relative;
+        top: 0;
+      }
+
+      .wave {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+      }
+
+      .wave#wave1 {
+        background: url(../images/wave.png);
+        background-size: 1000px 100px;
+        bottom: 0px;
+        animation: wave_1 2s linear infinite;
+      }
+
+      @keyframes wave_1 {
+        0% {
+          background-position-x: 0px;
+        }
+
+        100% {
+          background-position-x: 1000px;
+        }
+      }
+
+      .wave#wave2 {
+        background: url(../images/wave.png);
+        background-size: 1000px 100px;
+        bottom: 10px;
+        opacity: 0.8;
+        animation: wave_2 1s linear infinite;
+      }
+
+      @keyframes wave_2 {
+        0% {
+          background-position-x: 0px;
+        }
+
+        100% {
+          background-position-x: 1000px;
+        }
+      }
+
+      .wave#wave3 {
+        background: url(../images/wave.png);
+        background-size: 1000px 100px;
+        bottom: 19px;
+        opacity: 0.3;
+        animation: wave_3 0.8s linear infinite;
+      }
+
+      @keyframes wave_3 {
+        0% {
+          background-position-x: 0px;
+        }
+
+        100% {
+          background-position-x: 1000px;
+        }
+      }
+
+      .Menu-Navigation .Menu-list a {
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .copy span {
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 388px) {
+        .Menu-Navigation .Menu-list a {
+          text-decoration: none;
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+
+        .copy span {
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .Menu-Navigation .Menu-list a {
+          text-decoration: none;
+          font-size: 10px;
+          text-transform: uppercase;
+        }
+
+        .copy span {
+          font-size: 11px;
+          text-transform: uppercase;
+        }
+      }
+    </style>
+    <footer>
+      <div class="waves">
+        <span class="wave" id="wave1"></span>
+        <span class="wave" id="wave2"></span>
+        <span class="wave" id="wave3"></span>
+      </div>
+
+      <div class="footer-container">
+        <nav class="nav-social">
+          <ul class="icon-social">
+            <li class="social-media">
+              <a href=""><i style="font-size: 24px" class="fa">&#xf099;</i></a>
+            </li>
+            <li class="social-media">
+              <a href=""><i style="font-size: 24px" class="fa">&#xf09a;</i></a>
+            </li>
+            <li class="social-media">
+              <a href=""><i style="font-size: 24px" class="fa">&#xf16d;</i></a>
+            </li>
+            <li class="social-media">
+              <a href=""><i style="font-size: 24px" class="fa">&#xf232;</i></a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-menu">
+          <div class="Menu-contact">
+            <ul class="Menu-Navigation">
+              <li class="Menu-list"><a href="../Index.html">home</a></li>
+              <li class="Menu-list">
+                <a href="../secondary/php/login.php">Reserva</a>
+              </li>
+              <li class="Menu-list">
+                <a href="../secondary/Menu.html">Menu</a>
+              </li>
+              <li class="Menu-list">
+                <a href="../secondary/Contact.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+          <div class="copy"><span>&copy; 2022 | Annapurna Tandoori</span></div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

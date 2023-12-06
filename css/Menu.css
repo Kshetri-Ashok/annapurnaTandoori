@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&family=Tektur&display=swap");
+html body {
+  margin: 0;
+  padding: 0;
+}
+header div.Menu {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  display: grid;
+  place-content: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.content .title-content .image-description {
+  display: flex;
+  flex-direction: column;
+}
+.content .title-content .image-description .obj_image {
+  height: 50px;
+  width: 50px;
+}
+
+.content .title-content .image-description .descrption .info .info-details-Entrantes dl .dlName {
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+}
+.content .title-content .image-description .descrption .info .info-details-Entrantes dl dd {
+  font-family: "Lumanosimo", cursive;
+}
+.content .title-content .image-description .descrption .info .info-details-Entrantes dl .dlName dt {
+  font-family: "Tektur", cursive;
+}
+.content .title-content .image-description .descrption .info .info-details-Entrantes dl .dlName span {
+  font-family: "Tektur", cursive;
+}
+@media screen and (max-width: 380px) {
+  .content .title-content .image-description .descrption .info .info-details-Entrantes dl .dlName dt,
+  .content .title-content .image-description .descrption .info .info-details-Entrantes dl dd,
+  .content .title-content .image-description .descrption .info .info-details-Entrantes dl .dlName span {
+    font-size: 10px;
+  }
+}
